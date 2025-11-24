@@ -266,3 +266,51 @@ body {
     font-size: 1.1rem;
   }
 }
+/* --- GALERÍA RESPONSIVE DE 2 IMÁGENES --- */
+
+.imagenes-doble {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.imagenes-doble img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+    display: block;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+/* En pantallas pequeñas, que se coloquen una abajo de otra */
+@media (max-width: 768px) {
+    .imagenes-doble {
+        gap: 12px;
+    }
+
+    .imagenes-doble img {
+        max-width: 90%;
+    }
+}
+/* --- VIDEOS RESPONSIVOS --- */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 700px; /* opcional */
+  margin: 20px auto;
+  padding-bottom: 56.25%; /* relación 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px; /* opcional */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
